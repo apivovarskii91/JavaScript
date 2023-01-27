@@ -1,0 +1,114 @@
+/*
+essential styles:
+these make the slideshow work
+*/
+
+
+.slides {
+  position: relative;
+  height: 150px;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+
+.slide {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  bottom: 0;
+  left: 0px;
+  opacity: 0;
+  z-index: -999;
+  transition: opacity 0.25s;
+}
+
+.active {
+  opacity: 1;
+  z-index: 0;
+}
+
+/*
+non-essential styles:
+just for appearance; change whatever you want
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.slide {
+  font-size: 40px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #333;
+  color: #fff;
+}
+
+.slide:nth-of-type(1) {
+  background: red;
+}
+
+.slide:nth-of-type(2) {
+  background: orange;
+}
+
+.slide:nth-of-type(3) {
+  background: green;
+}
+
+.slide:nth-of-type(4) {
+  background: blue;
+}
+
+.slide:nth-of-type(5) {
+  background: purple;
+}
+
+
+.carousel {
+  margin: 20px;
+}
+
+.slides {
+  margin-bottom: 20px;
+}
+
+.indicators,
+.controls {
+  display: flex;
+  gap: 20px;
+  user-select: none;
+  margin-bottom: 20px;
+}
+
+.indicator,
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25em;
+  border: 1px solid grey;
+  border-radius: 7px;
+  height: 40px;
+  min-width: 40px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.indicator:hover,
+.control:hover {
+  background-color: yellow;
+}
+
+.indicator.active {
+  background-color: red;
+  color: white;
+  border-color: transparent;
+}
